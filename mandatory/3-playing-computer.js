@@ -11,7 +11,7 @@
   3. What is printed to the console?
   4. How many times is "f1" called?
   5. How many times is "f2" called?
-  6. What value does the "a" parameter take in the first "f1" call?
+  6. What value does the "a" parameter take in the first "f1" call? 6
   7. What is the value of the "a" outer variable when "f1" is called for the first time?
 */
 
@@ -26,17 +26,17 @@ const f2 = function (a, b) {
   return a + b + x;
 };
 
-console.log(x);
-console.log(a);
-console.log(b);
+console.log(x);// x= 2
+console.log(a); // a = 6 
+console.log(b); // undefined
 
-for (let i = 0; i < 5; ++i) {
+for (let i = 0; i < 5; ++i) {// 0  1 2 3 4 
   a = a + 1;
   if (i % 2 === 0) {
-    const d = f2(i, x);
-    console.log(d);
+    const d = f2(i, x); // 1 +1 // 2 
+    console.log(d); // 5  7 
   } else {
-    const e = f1(i, a);
-    console.log(e);
+    const e = f1(i, a); // 1 +1+ 1 // 3 
+    console.log(e); // 7  11  15
   }
 }
